@@ -16,7 +16,7 @@ apt-get install -y mc > /dev/null
 echo "Done!"
 
 echo "Installing PHP…"
-apt-get install -y php5-cli php5-common php5-memcache php5-mysql php5-fpm php-pear php5-mcrypt php5-curl > /dev/null
+apt-get install -y php5-cli php5-geoip php5-common php5-memcache php5-mysql php5-fpm php-pear php5-mcrypt php5-imap php5-curl > /dev/null
 sed -i "s:short_open_tag = Off:#short_open_tag = On:" /etc/php5/fpm/php.ini
 sed -i "s:short_open_tag = Off:#short_open_tag = On:" /etc/php5/cli/php.ini
 service php5-fpm restart

@@ -4,7 +4,8 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.synced_folder "/srv/utils", "/srv/utils"
-  config.vm.synced_folder "/srv/www", "/srv/www"
+  config.vm.synced_folder "/srv/www", "/srv/www",
+	id: "vagrant-www", owner: "www-data", group: "www-data"
   config.vm.synced_folder "/srv/nginx", "/srv/nginx"
   config.vm.synced_folder "/srv/mysql", "/srv/mysql",
     mount_options: ["dmode=777","fmode=777"]
